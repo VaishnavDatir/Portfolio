@@ -32,20 +32,20 @@
   color: white;
 
   &:hover {
-    transform: translateY(-3px);
-    scale: 1.02;
-    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25);
+    transform: translateY(-2px);
+    scale: 1.01;
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
   }
 }
 
 .secondary {
   border: 1px solid var(--border);
-
   color: var(--text-primary);
 
   &:hover {
     background: var(--surface);
     transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
   }
 }
 

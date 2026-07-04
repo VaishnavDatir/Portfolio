@@ -1,10 +1,15 @@
 [data-theme="dark"] {
     --background: #020617;
-    --surface: #0f172a;
-    --card: #0f172a;
+    --background-secondary: #0f172a;
+    --surface: #111827;
+    --card: #111827;
 
     --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
+    --text-secondary: #cbd5e1;
+    --muted: #94a3b8;
 
     --border: #1e293b;
+    --border-strong: #334155;
+
+    --hero-base: #020617;
 }

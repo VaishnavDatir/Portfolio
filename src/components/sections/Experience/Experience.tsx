@@ -17,21 +17,11 @@ const Experience = () => {
             <motion.article
               key={job.company}
               className={styles.card}
-              initial={{
-                opacity: 0,
-                y: 40,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-                amount: 0.3,
-              }}
-              transition={{
-                delay: index * 0.15,
-              }}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ delay: index * 0.1, duration: 0.45 }}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
             >
               <div className={styles.marker} />
 

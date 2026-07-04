@@ -62,13 +62,10 @@
 
 .card {
   padding: 2rem;
-
   border: 1px solid var(--border);
-
   border-radius: 20px;
-
   background: var(--card);
-
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
   transition: 0.3s ease;
 }
 

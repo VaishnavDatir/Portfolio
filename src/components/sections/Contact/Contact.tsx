@@ -15,17 +15,10 @@ const Contact = () => {
     <section id="contact" className={styles.contact} aria-labelledby="contact-title">
       <motion.div
         className={styles.card}
-        initial={{
-          opacity: 0,
-          y: 40,
-        }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-        }}
-        viewport={{
-          once: true,
-        }}
+        initial={{ opacity: 0, y: 28 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
       >
         <span className={styles.badge}>{contact.availability}</span>
 

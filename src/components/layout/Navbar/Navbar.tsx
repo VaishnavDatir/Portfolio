@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
@@ -84,7 +85,13 @@ const Navbar = () => {
         [styles.scrolled]: scrolled,
       })}
     >
-      <nav className={styles.nav} aria-label="Primary">
+      <motion.nav
+        className={styles.nav}
+        aria-label="Primary"
+        initial={{ opacity: 0, y: -8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.35 }}
+      >
         <a href="#hero" className={styles.logo}>
           VD
         </a>
@@ -118,7 +125,7 @@ const Navbar = () => {
             {mobileOpen ? <FiX /> : <FiMenu />}
           </button>
         </div>
-      </nav>
+      </motion.nav>
 
       <aside
         id="mobile-navigation"

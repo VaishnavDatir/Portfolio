@@ -1,12 +1,9 @@
 .wrapper {
   overflow: hidden;
-
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-
   padding: 1.5rem 0;
-
-  background: var(--surface);
+  background: var(--background-secondary);
 }
 
 .track {
@@ -19,16 +16,11 @@
 
 .item {
   margin-right: 4rem;
-
   color: var(--text-secondary);
-
   font-weight: 700;
-
   letter-spacing: 0.08em;
-
   text-transform: uppercase;
-
-  transition: 0.25s ease;
+  transition: color 0.25s ease;
 }
 
 .item:hover {
