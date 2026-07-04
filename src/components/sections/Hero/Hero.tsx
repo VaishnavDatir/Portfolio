@@ -1,11 +1,13 @@
 import Button from "@/components/common/Button";
 import { portfolio } from "@/data";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
+import { useMemo } from "react";
 import { FiArrowDown, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
 import styles from "./Hero.module.scss";
 
-const container = {
+// Shared variants configuration
+const leftContainerVariants = {
   hidden: {},
   visible: {
     transition: {
@@ -14,7 +16,7 @@ const container = {
   },
 };
 
-const item = {
+const leftItemVariants = {
   hidden: {
     opacity: 0,
     y: 24,
@@ -28,46 +30,98 @@ const item = {
   },
 };
 
+const cloudContainerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const cloudItemVariants: Variants = {
+  hidden: { opacity: 0, scale: 0.8, y: 15 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 90,
+      damping: 14,
+    },
+  },
+};
+
 const Hero = () => {
   const { hero } = portfolio;
   const shouldReduceMotion = useReducedMotion();
+
   const socialIcons = {
     GitHub: <FiGithub />,
     LinkedIn: <FiLinkedin />,
     Email: <FiMail />,
   } as const;
+
+  const dynamicTechnologies = useMemo(() => {
+    const total = hero.technologies.length;
+
+    return hero.technologies.map((tech, index) => {
+      const angle = index * 2.4;
+
+      const radiusX = 25 + (index / total) * 50;
+      const radiusY = 40 + (index / total) * 25;
+
+      const left = 50 + Math.cos(angle) * radiusX;
+      const top = 48 + Math.sin(angle) * radiusY;
+
+      const floatDelay = `${(index * 0.45).toFixed(2)}s`;
+
+      return {
+        name: tech,
+        style: {
+          left: `${left}%`,
+          top: `${top}%`,
+          transform: "translate(-50%, -50%)",
+          animationDelay: floatDelay,
+        },
+      };
+    });
+  }, [hero.technologies]);
+
   return (
     <section id="hero" className={styles.hero} aria-labelledby="hero-title">
       <div className={styles.glow} aria-hidden="true" />
       <div className={styles.grid}>
         <motion.div
           className={styles.left}
-          variants={container}
+          variants={leftContainerVariants}
           initial={shouldReduceMotion ? false : "hidden"}
           animate={shouldReduceMotion ? false : "visible"}
         >
-          <motion.div className={styles.badge} variants={item}>
+          <motion.div className={styles.badge} variants={leftItemVariants}>
             <span className={styles.dot} aria-hidden="true" />
             {hero.badge}
           </motion.div>
 
-          <motion.h1 id="hero-title" className={styles.title} variants={item}>
+          <motion.h1 id="hero-title" className={styles.title} variants={leftItemVariants}>
             {hero.title}
           </motion.h1>
 
-          <motion.p className={styles.description} variants={item}>
+          <motion.p className={styles.description} variants={leftItemVariants}>
             {hero.description}
           </motion.p>
 
-          <motion.div variants={item} className={styles.actions}>
+          <motion.div variants={leftItemVariants} className={styles.actions}>
             <Button href={hero.primaryButton.href}>{hero.primaryButton.text}</Button>
-
             <Button href={hero.secondaryButton.href} variant="secondary">
               {hero.secondaryButton.text}
             </Button>
           </motion.div>
 
-          <motion.div variants={item} className={styles.footer}>
+          <motion.div variants={leftItemVariants} className={styles.footer}>
             <div className={styles.socials}>
               {portfolio.socials.map((social) => (
                 <a
@@ -81,24 +135,28 @@ const Hero = () => {
                 </a>
               ))}
             </div>
-
-            <div className={styles.location}>📍 Mumbai, India</div>
           </motion.div>
         </motion.div>
 
         <motion.div
           className={styles.right}
-          initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.9 }}
-          animate={shouldReduceMotion ? false : { opacity: 1, scale: 1 }}
-          transition={shouldReduceMotion ? undefined : { duration: 0.8, delay: 0.5 }}
+          variants={shouldReduceMotion ? {} : cloudContainerVariants}
+          initial={shouldReduceMotion ? false : "hidden"}
+          animate={shouldReduceMotion ? false : "visible"}
         >
-          {hero.technologies.map((tech) => (
-            <div key={tech} className={styles.tech}>
-              {tech}
-            </div>
+          {dynamicTechnologies.map((tech) => (
+            <motion.div
+              key={tech.name}
+              className={styles.tech}
+              style={tech.style}
+              variants={shouldReduceMotion ? {} : cloudItemVariants}
+            >
+              {tech.name}
+            </motion.div>
           ))}
         </motion.div>
       </div>
+
       <motion.div
         className={styles.scroll}
         initial={{ opacity: 0 }}
@@ -106,7 +164,6 @@ const Hero = () => {
         transition={{ delay: 1.4 }}
       >
         <FiArrowDown />
-
         <span>Scroll</span>
       </motion.div>
     </section>

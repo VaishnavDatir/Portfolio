@@ -4,11 +4,11 @@ export const portfolio: PortfolioData = {
   site: {
     title: "Vaishnav Datir",
     description:
-      "Software Engineer specializing in Java, Spring Boot, React, Flutter, Kafka, Azure and Cloud Native Applications.",
+      "Software Engineer specializing in Java, Spring Boot, React, Flutter, Kafka, Azure, AWS and Cloud Native Applications.",
   },
 
   hero: {
-    badge: "Available for full-time and freelance opportunities",
+    badge: "Available for freelance opportunities",
 
     title: "Building dependable software for modern products.",
 
@@ -26,16 +26,19 @@ export const portfolio: PortfolioData = {
     },
 
     technologies: [
-      "Java",
       "Spring Boot",
+      "Java",
       "Kafka",
       "React",
       "Flutter",
       "Azure",
+      "AWS",
       "Docker",
       "Kubernetes",
-      "Oracle",
+      "SQL",
+      "NoSQL",
       "TypeScript",
+      "Firebase"
     ],
   },
 
