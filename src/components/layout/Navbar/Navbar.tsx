@@ -60,6 +60,22 @@ const Navbar = () => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
   }, [mobileOpen]);
 
+  useEffect(() => {
+    if (!mobileOpen) {
+      return undefined;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMobileOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [mobileOpen]);
+
   const closeMenu = () => setMobileOpen(false);
 
   return (
@@ -68,7 +84,7 @@ const Navbar = () => {
         [styles.scrolled]: scrolled,
       })}
     >
-      <nav className={styles.nav}>
+      <nav className={styles.nav} aria-label="Primary">
         <a href="#hero" className={styles.logo}>
           VD
         </a>
@@ -94,6 +110,9 @@ const Navbar = () => {
           <button
             type="button"
             className={styles.menuButton}
+            aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-navigation"
             onClick={() => setMobileOpen((v) => !v)}
           >
             {mobileOpen ? <FiX /> : <FiMenu />}
@@ -102,9 +121,11 @@ const Navbar = () => {
       </nav>
 
       <aside
+        id="mobile-navigation"
         className={clsx(styles.mobileMenu, {
           [styles.mobileOpen]: mobileOpen,
         })}
+        aria-hidden={!mobileOpen}
       >
         {LINKS.map((link) => (
           <a key={link.id} href={`#${link.id}`} onClick={closeMenu}>

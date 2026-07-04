@@ -53,19 +53,27 @@
 
 .links {
   display: flex;
-
+  align-items: center;
   gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.links li {
+  display: flex;
+  align-items: center;
 }
 
 .links a {
   position: relative;
-
+  display: inline-flex;
+  align-items: center;
   color: var(--text-secondary);
-
   transition: 0.25s;
 }
 
-.links a:hover {
+.links a:hover,
+.links a:focus-visible {
   color: var(--text-primary);
 }
 
@@ -113,6 +121,12 @@
   background: var(--card);
 
   color: var(--text-primary);
+  cursor: pointer;
+}
+
+.menuButton:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
 .menuButton svg {

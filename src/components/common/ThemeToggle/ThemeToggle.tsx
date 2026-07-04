@@ -6,10 +6,19 @@ import styles from "./ThemeToggle.module.scss";
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
+  const isDark = theme === "dark";
+  const nextTheme = isDark ? "light" : "dark";
 
   return (
-    <button type="button" aria-label="Toggle theme" className={styles.toggle} onClick={toggleTheme}>
-      {theme === "dark" ? <FiSun /> : <FiMoon />}
+    <button
+      type="button"
+      aria-label={`Switch to ${nextTheme} theme`}
+      aria-pressed={isDark}
+      title={`Switch to ${nextTheme} theme`}
+      className={styles.toggle}
+      onClick={toggleTheme}
+    >
+      {isDark ? <FiSun aria-hidden="true" /> : <FiMoon aria-hidden="true" />}
     </button>
   );
 };

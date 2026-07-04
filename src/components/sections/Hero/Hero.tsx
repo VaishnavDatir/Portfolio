@@ -1,6 +1,6 @@
 import Button from "@/components/common/Button";
 import { portfolio } from "@/data";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { FiArrowDown, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
 import styles from "./Hero.module.scss";
@@ -30,6 +30,7 @@ const item = {
 
 const Hero = () => {
   const { hero } = portfolio;
+  const shouldReduceMotion = useReducedMotion();
   const socialIcons = {
     GitHub: <FiGithub />,
     LinkedIn: <FiLinkedin />,
@@ -37,20 +38,26 @@ const Hero = () => {
   } as const;
   return (
     <section id="hero" className={styles.hero} aria-labelledby="hero-title">
-      {" "}
-      <div className={styles.glow} />
+      <div className={styles.glow} aria-hidden="true" />
       <div className={styles.grid}>
-        <motion.div className={styles.left} variants={container} initial="hidden" animate="visible">
+        <motion.div
+          className={styles.left}
+          variants={container}
+          initial={shouldReduceMotion ? false : "hidden"}
+          animate={shouldReduceMotion ? false : "visible"}
+        >
           <motion.div className={styles.badge} variants={item}>
-            <span className={styles.dot} />
+            <span className={styles.dot} aria-hidden="true" />
             {hero.badge}
           </motion.div>
 
-          <motion.h1 id="hero-title" variants={item}>
+          <motion.h1 id="hero-title" className={styles.title} variants={item}>
             {hero.title}
           </motion.h1>
 
-          <motion.p variants={item}>{hero.description}</motion.p>
+          <motion.p className={styles.description} variants={item}>
+            {hero.description}
+          </motion.p>
 
           <motion.div variants={item} className={styles.actions}>
             <Button href={hero.primaryButton.href}>{hero.primaryButton.text}</Button>
@@ -81,18 +88,9 @@ const Hero = () => {
 
         <motion.div
           className={styles.right}
-          initial={{
-            opacity: 0,
-            scale: 0.9,
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{
-            duration: 0.8,
-            delay: 0.5,
-          }}
+          initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.9 }}
+          animate={shouldReduceMotion ? false : { opacity: 1, scale: 1 }}
+          transition={shouldReduceMotion ? undefined : { duration: 0.8, delay: 0.5 }}
         >
           {hero.technologies.map((tech) => (
             <div key={tech} className={styles.tech}>

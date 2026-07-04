@@ -19,9 +19,9 @@ const About = () => {
         >
           <span className={styles.sectionTitle}>{about.title}</span>
 
-          <h2>{about.heading}</h2>
+          <h2 className={styles.heading}>{about.heading}</h2>
 
-          <p>{about.description}</p>
+          <p className={styles.description}>{about.description}</p>
         </motion.div>
 
         <div className={styles.right}>

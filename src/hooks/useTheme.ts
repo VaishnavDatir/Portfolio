@@ -5,15 +5,17 @@ export type Theme = "light" | "dark";
 const STORAGE_KEY = "portfolio-theme";
 
 const getPreferredTheme = (): Theme => {
-    const savedTheme = localStorage.getItem(STORAGE_KEY) as Theme | null;
+    if (typeof window === "undefined") {
+        return "light";
+    }
 
-    if (savedTheme) {
+    const savedTheme = window.localStorage.getItem(STORAGE_KEY);
+
+    if (savedTheme === "light" || savedTheme === "dark") {
         return savedTheme;
     }
 
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 };
 
 export const useTheme = () => {
@@ -21,8 +23,8 @@ export const useTheme = () => {
 
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", theme);
-        localStorage.setItem(STORAGE_KEY, theme);
-    }, [theme]);
+      window.localStorage.setItem(STORAGE_KEY, theme);
+  }, [theme]);
 
     const toggleTheme = () => {
         setTheme((current) => (current === "light" ? "dark" : "light"));

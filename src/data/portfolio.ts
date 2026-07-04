@@ -8,12 +8,12 @@ export const portfolio: PortfolioData = {
   },
 
   hero: {
-    badge: "Available for Full-time & Freelance",
+    badge: "Available for full-time and freelance opportunities",
 
-    title: "Building reliable software for modern businesses.",
+    title: "Building dependable software for modern products.",
 
     description:
-      "Software Engineer specializing in Java, Spring Boot, React, Flutter, Kafka, Azure, Docker and Kubernetes. Passionate about building scalable backend systems and delightful user experiences.",
+      "Software engineer focused on backend systems, cloud-native applications, and polished user experiences. I enjoy turning complex requirements into reliable, maintainable software.",
 
     primaryButton: {
       text: "View Projects",
@@ -51,16 +51,16 @@ export const portfolio: PortfolioData = {
     "Docker",
     "Kubernetes",
     "Oracle",
-    "MySQL"
+    "MySQL",
   ],
 
   about: {
     title: "About",
 
-    heading: "Building software isn't just writing code—it's solving real business problems.",
+    heading: "Great software is built by solving the right problems well.",
 
     description:
-      "I'm a Software Engineer with experience designing scalable backend systems, modern web applications and cross-platform mobile apps. I enjoy building products that are reliable, maintainable and enjoyable to use.",
+      "I’m a software engineer with experience designing scalable backend systems, modern web applications, and cross-platform products. I care deeply about reliability, maintainability, and thoughtful user experience.",
 
     cards: [
       {
@@ -104,9 +104,9 @@ export const portfolio: PortfolioData = {
 
       highlights: [
         "Developing scalable enterprise applications for global financial platforms.",
-        "Building performant backend services using Java and Spring Boot.",
-        "Collaborating with cross-functional teams to deliver secure and reliable software.",
-        "Contributing to production-grade systems following engineering best practices.",
+        "Building high-performance backend services using Java and Spring Boot.",
+        "Collaborating with cross-functional teams to deliver secure, reliable software.",
+        "Contributing to production-grade systems using strong engineering practices.",
       ],
     },
 
@@ -131,9 +131,9 @@ export const portfolio: PortfolioData = {
 
       highlights: [
         "Developed cloud-native microservices for the New York Tolling Modernization project.",
-        "Optimized SQL queries and backend processing for high-volume workloads.",
-        "Integrated Kafka, Azure Event Hubs and enterprise messaging solutions.",
-        "Worked in Agile teams delivering production-ready software.",
+        "Optimized SQL and backend processing for high-volume workloads.",
+        "Integrated Kafka, Azure Event Hubs, and enterprise messaging solutions.",
+        "Worked in agile teams delivering production-ready software.",
       ],
     },
   ],
@@ -143,7 +143,7 @@ export const portfolio: PortfolioData = {
       title: "Personal Portfolio",
 
       description:
-        "Modern portfolio showcasing my experience, projects and engineering approach using React, TypeScript and SCSS.",
+        "A polished portfolio showcasing my experience, engineering approach, and recent work using React, TypeScript, and SCSS.",
 
       technologies: [
         "React",
@@ -164,7 +164,7 @@ export const portfolio: PortfolioData = {
       title: "LifeOS",
 
       description:
-        "Offline-first personal productivity platform for finance, health, habits and goals built with Flutter.",
+        "An offline-first personal productivity platform for finance, health, habits, and goals built with Flutter.",
 
       technologies: [
         "Flutter",
@@ -184,7 +184,7 @@ export const portfolio: PortfolioData = {
       title: "New York Tolling Modernization",
 
       description:
-        "Enterprise backend services for a large-scale tolling modernization platform with cloud-native architecture.",
+        "Enterprise backend services for a large-scale tolling modernization platform built with cloud-native architecture.",
 
       technologies: [
         "Java",
@@ -236,22 +236,20 @@ export const portfolio: PortfolioData = {
     },
     {
       platform: "Email",
-      url: "mailto:your@email.com",
+      url: "mailto:vaishnav.datir@gmail.com",
     },
   ],
 
   contact: {
-    title: "Let's build something great together.",
+    title: "Let’s build something meaningful together.",
 
     description:
-      "Whether you have an opportunity, a freelance project, or simply want to connect, I'd be happy to hear from you.",
+      "Whether you have an opportunity, a freelance project, or simply want to connect, I’d be happy to hear from you.",
 
-    email: "your@email.com",
+    email: "vaishnav.datir@gmail.com",
 
     location: "Mumbai, India",
 
     availability: "Open to opportunities",
   },
-
-
 };

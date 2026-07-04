@@ -19,7 +19,7 @@
   font-weight: $fw-semibold;
 }
 
-.container > h2 {
+.heading {
   font-family: $font-heading;
   font-size: clamp(2.2rem, 5vw, 3.6rem);
   max-width: 12ch;
@@ -55,12 +55,12 @@
   padding: 2rem;
 }
 
-.content h3 {
+.projectTitle {
   margin-bottom: 1rem;
   font-size: 1.4rem;
 }
 
-.content p {
+.projectDescription {
   color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: 1.75rem;

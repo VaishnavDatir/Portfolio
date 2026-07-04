@@ -30,9 +30,9 @@ const Achievements = () => {
                 delay: index * 0.12,
               }}
             >
-              <h2>{item.value}</h2>
+              <h2 className={styles.value}>{item.value}</h2>
 
-              <p>{item.label}</p>
+              <p className={styles.label}>{item.label}</p>
             </motion.article>
           ))}
         </div>

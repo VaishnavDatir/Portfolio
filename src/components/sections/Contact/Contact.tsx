@@ -8,13 +8,11 @@ import styles from "./Contact.module.scss";
 
 const Contact = () => {
   const { contact, socials } = portfolio;
-
-  const github = socials.find((x) => x.platform === "GitHub");
-
-  const linkedin = socials.find((x) => x.platform === "LinkedIn");
+  const github = socials.find((social) => social.platform === "GitHub");
+  const linkedin = socials.find((social) => social.platform === "LinkedIn");
 
   return (
-    <section id="contact" className={styles.contact}>
+    <section id="contact" className={styles.contact} aria-labelledby="contact-title">
       <motion.div
         className={styles.card}
         initial={{
@@ -31,9 +29,11 @@ const Contact = () => {
       >
         <span className={styles.badge}>{contact.availability}</span>
 
-        <h2>{contact.title}</h2>
+        <h2 id="contact-title" className={styles.title}>
+          {contact.title}
+        </h2>
 
-        <p>{contact.description}</p>
+        <p className={styles.description}>{contact.description}</p>
 
         <div className={styles.actions}>
           <Button href={`mailto:${contact.email}`}>
@@ -48,7 +48,7 @@ const Contact = () => {
         </div>
 
         <div className={styles.info}>
-          <a href={`mailto:${contact.email}`}>
+          <a href={`mailto:${contact.email}`} aria-label={`Email ${contact.email}`}>
             <FiMail />
 
             {contact.email}
@@ -60,13 +60,13 @@ const Contact = () => {
             {contact.location}
           </span>
 
-          <a href={github?.url} target="_blank" rel="noreferrer">
+          <a href={github?.url} target="_blank" rel="noreferrer" aria-label="Visit GitHub profile">
             <FiGithub />
             GitHub
           </a>
         </div>
 
-        <a href="#hero" className={styles.back}>
+        <a href="#hero" className={styles.back} aria-label="Back to top of page">
           Back to Top
           <FiArrowRight />
         </a>
