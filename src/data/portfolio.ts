@@ -6,25 +6,19 @@ export const portfolio: PortfolioData = {
     description:
       "Software Engineer specializing in Java, Spring Boot, React, Flutter, Kafka, Azure, AWS and Cloud Native Applications.",
   },
-
   hero: {
     badge: "Available for freelance opportunities",
-
     title: "Building dependable software for modern products.",
-
     description:
       "Software engineer focused on backend systems, cloud-native applications, and polished user experiences. I enjoy turning complex requirements into reliable, maintainable software.",
-
     primaryButton: {
       text: "View Projects",
       href: "#projects",
     },
-
     secondaryButton: {
       text: "Contact Me",
       href: "#contact",
     },
-
     technologies: [
       "Spring Boot",
       "Java",
@@ -41,7 +35,6 @@ export const portfolio: PortfolioData = {
       "Firebase"
     ],
   },
-
   technologies: [
     "Java",
     "Spring Boot",
@@ -56,15 +49,11 @@ export const portfolio: PortfolioData = {
     "Oracle",
     "MySQL",
   ],
-
   about: {
     title: "About",
-
     heading: "Great software is built by solving the right problems well.",
-
     description:
       "I’m a software engineer with experience designing scalable backend systems, modern web applications, and cross-platform products. I care deeply about reliability, maintainability, and thoughtful user experience.",
-
     cards: [
       {
         title: "3.5+ Years",
@@ -84,17 +73,12 @@ export const portfolio: PortfolioData = {
       },
     ],
   },
-
   experience: [
     {
       company: "JPMorgan Chase",
-
       role: "Software Engineer II",
-
       duration: "Jan 2026 — Present",
-
       location: "Mumbai, India",
-
       technologies: [
         "Java",
         "Spring Boot",
@@ -104,7 +88,6 @@ export const portfolio: PortfolioData = {
         "Docker",
         "Kubernetes",
       ],
-
       highlights: [
         "Developing scalable enterprise applications for global financial platforms.",
         "Building high-performance backend services using Java and Spring Boot.",
@@ -112,16 +95,11 @@ export const portfolio: PortfolioData = {
         "Contributing to production-grade systems using strong engineering practices.",
       ],
     },
-
     {
       company: "Birlasoft",
-
       role: "Senior Software Developer",
-
       duration: "Jun 2022 — Dec 2025",
-
       location: "Navi Mumbai, India",
-
       technologies: [
         "Java",
         "Spring Boot",
@@ -131,7 +109,6 @@ export const portfolio: PortfolioData = {
         "Oracle",
         "Docker",
       ],
-
       highlights: [
         "Developed cloud-native microservices for the New York Tolling Modernization project.",
         "Optimized SQL and backend processing for high-volume workloads.",
@@ -140,89 +117,117 @@ export const portfolio: PortfolioData = {
       ],
     },
   ],
-
   projects: [
     {
       title: "Personal Portfolio",
-
-      description:
-        "A polished portfolio showcasing my experience, engineering approach, and recent work using React, TypeScript, and SCSS.",
-
-      technologies: [
-        "React",
-        "TypeScript",
-        "SCSS",
-        "Framer Motion",
-        "Vite",
-      ],
-
+      description: "A polished portfolio showcasing my experience, engineering approach, and recent work using React, TypeScript, and SCSS.",
+      technologies: ["React", "TypeScript", "SCSS", "Framer Motion", "Vite"],
       github: "",
-
       live: "",
-
       featured: true,
     },
-
     {
       title: "LifeOS",
-
-      description:
-        "An offline-first personal productivity platform for finance, health, habits, and goals built with Flutter.",
-
-      technologies: [
-        "Flutter",
-        "Isar",
-        "Provider",
-        "MVVM",
-      ],
-
+      description: "An offline-first personal productivity platform for finance, health, habits, and goals built with Flutter.",
+      technologies: ["Flutter", "Isar", "Provider", "MVVM"],
       github: "",
-
       live: "",
-
       featured: true,
     },
-
     {
       title: "New York Tolling Modernization",
-
-      description:
-        "Enterprise backend services for a large-scale tolling modernization platform built with cloud-native architecture.",
-
-      technologies: [
-        "Java",
-        "Spring Boot",
-        "Kafka",
-        "Azure",
-        "Oracle",
-      ],
-
+      description: "Enterprise backend services for a large-scale tolling modernization platform built with cloud-native architecture.",
+      technologies: ["Java", "Spring Boot", "Kafka", "Azure", "Oracle"],
       github: "",
-
       live: "",
-
       featured: true,
     },
+    {
+      title: "Plugin: Sql_Conn",
+      description: "A versatile Flutter plugin for seamless SQL database connections and queries, supporting multiple database engines. Widely used and highly rated on pub.dev.",
+      technologies: ["Flutter", "Dart", "SQL", "Android", "iOS"],
+      github: "https://github.com/VaishnavDatir/sql_conn",
+      live: "",
+      featured: true,
+    },
+    {
+      title: "Student Vaccination Portal",
+      description: "A full-stack web application to manage and track student vaccination records, ensuring timely immunizations and reporting.",
+      technologies: ["React", "Node.js", "Express", "MongoDB"],
+      github: "https://github.com/VaishnavDatir/vaccination-portal",
+      live: "",
+      featured: false,
+    },
+    {
+      title: "Live Bus Tracking Application",
+      description: "Real-time bus tracking app that displays live locations, routes, and estimated arrival times to improve commuter experience.",
+      technologies: ["Flutter", "Firebase", "Google Maps API", "Dart"],
+      github: "https://github.com/VaishnavDatir/busTracking_app",
+      live: "",
+      featured: false,
+    },
+    {
+      title: "Brand Management System",
+      description: "A comprehensive system for managing brand assets, marketing campaigns, and client interactions with an analytics dashboard. This was a private project developed for an organization.",
+      technologies: ["React", "TypeScript", "Node.js", "Chart.js"],
+      github: "",
+      live: "",
+      featured: false,
+    },
+    {
+      title: "Community Management Application",
+      description: "An app designed to help community admins manage member registrations, announcements, event scheduling, and feedback. This was a private project developed for an organization.",
+      technologies: ["Flutter", "Firebase", "Cloud Functions"],
+      github: "",
+      live: "",
+      featured: false,
+    },
+    {
+      title: "Interview Management System",
+      description: "Tool to streamline interview scheduling, candidate tracking, and feedback collection for recruitment teams.",
+      technologies: ["React", "Node.js", "SQL", "TailwindCSS"],
+      github: "https://github.com/VaishnavDatir/Interview-Management-System",
+      live: "",
+      featured: false,
+    },
+    {
+      title: "News App",
+      description: "An innovative news app delivering the latest updates with a clean interface and personalized content to keep users informed and productive.",
+      technologies: ["Flutter", "Dart", "REST API", "Bloc"],
+      github: "https://github.com/VaishnavDatir/Flutter-NewsBucket",
+      live: "",
+      featured: false,
+    },
+    {
+      title: "Movie App",
+      description: "A Flutter app to browse, search, and favorite movies, fetching data from popular movie databases with user ratings.",
+      technologies: ["Flutter", "TMDB API", "Dart", "Provider"],
+      github: "https://github.com/VaishnavDatir/Flutter-Movie-App",
+      live: "",
+      featured: false,
+    },
+    {
+      title: "Weather App",
+      description: "A sleek weather application providing current conditions, forecasts, and severe weather alerts using APIs.",
+      technologies: ["Flutter", "OpenWeather API", "Dart", "Geolocator"],
+      github: "https://github.com/VaishnavDatir/weatherapp",
+      live: "",
+      featured: false,
+    },
   ],
-
   achievements: [
     {
-      value: "3.5+",
-
+      value: "4+",
       label: "Years Building Production Software",
     },
-
     {
       value: "Enterprise",
-
       label: "Financial Systems",
     },
-
     {
       value: "Cloud Native",
       label: "Azure • Docker • Kubernetes",
     },
-
     {
       value: "Backend",
       label: "Java • Spring Boot • Kafka",
@@ -242,17 +247,12 @@ export const portfolio: PortfolioData = {
       url: "mailto:vaishnav.datir@gmail.com",
     },
   ],
-
   contact: {
     title: "Let’s build something meaningful together.",
-
     description:
       "Whether you have an opportunity, a freelance project, or simply want to connect, I’d be happy to hear from you.",
-
     email: "vaishnav.datir@gmail.com",
-
     location: "Mumbai, India",
-
     availability: "Open to opportunities",
   },
 };

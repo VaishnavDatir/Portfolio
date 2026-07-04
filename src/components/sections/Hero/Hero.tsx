@@ -71,8 +71,8 @@ const Hero = () => {
     return hero.technologies.map((tech, index) => {
       const angle = index * 2.4;
 
-      const radiusX = 25 + (index / total) * 50;
-      const radiusY = 40 + (index / total) * 25;
+      const radiusX = 20 + (index / total) * 50;
+      const radiusY = 30 + (index / total) * 25;
 
       const left = 50 + Math.cos(angle) * radiusX;
       const top = 48 + Math.sin(angle) * radiusY;
