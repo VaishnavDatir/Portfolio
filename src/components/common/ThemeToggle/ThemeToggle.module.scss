@@ -1,0 +1,30 @@
+.toggle {
+  width: 48px;
+
+  height: 48px;
+
+  border-radius: 50%;
+
+  border: 1px solid var(--border);
+
+  background: var(--card);
+
+  color: var(--text-primary);
+
+  display: grid;
+
+  place-items: center;
+
+  transition: 0.25s ease;
+
+  cursor: pointer;
+
+  &:hover {
+    transform: rotate(20deg);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}

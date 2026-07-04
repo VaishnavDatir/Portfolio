@@ -1,0 +1,46 @@
+.wrapper {
+  overflow: hidden;
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+
+  padding: 1.5rem 0;
+
+  background: var(--surface);
+}
+
+.track {
+  display: flex;
+
+  width: max-content;
+
+  animation: marquee 32s linear infinite;
+}
+
+.item {
+  margin-right: 4rem;
+
+  color: var(--text-secondary);
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  transition: 0.25s ease;
+}
+
+.item:hover {
+  color: var(--color-primary);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

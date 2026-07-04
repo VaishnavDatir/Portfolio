@@ -1,0 +1,118 @@
+@use "@/styles/abstracts" as *;
+
+.contact {
+  padding: 8rem 1rem;
+}
+
+.card {
+  width: min(100%, 900px);
+
+  margin-inline: auto;
+
+  text-align: center;
+
+  padding: 5rem;
+
+  border-radius: 32px;
+
+  border: 1px solid var(--border);
+
+  background: var(--card);
+}
+
+.badge {
+  display: inline-block;
+
+  margin-bottom: 1.5rem;
+
+  color: var(--color-primary);
+
+  font-weight: $fw-semibold;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+  font-size: 0.8rem;
+}
+
+.card h2 {
+  font-family: $font-heading;
+
+  font-size: clamp(2.4rem, 5vw, 4rem);
+
+  margin-bottom: 1.5rem;
+}
+
+.card p {
+  max-width: 620px;
+
+  margin-inline: auto;
+
+  color: var(--text-secondary);
+
+  line-height: 1.9;
+
+  margin-bottom: 3rem;
+}
+
+.actions {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 1rem;
+
+  flex-wrap: wrap;
+}
+
+.info {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 2rem;
+
+  flex-wrap: wrap;
+
+  margin-top: 3rem;
+
+  color: var(--text-secondary);
+}
+
+.info a,
+.info span {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+}
+
+.back {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.6rem;
+
+  margin-top: 4rem;
+
+  color: var(--color-primary);
+
+  font-weight: 600;
+}
+
+.back:hover svg {
+  transform: translateX(4px);
+}
+
+.back svg {
+  transition: 0.25s;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 3rem 2rem;
+  }
+}
