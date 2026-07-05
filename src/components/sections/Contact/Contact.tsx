@@ -31,12 +31,10 @@ const Contact = () => {
         <div className={styles.actions}>
           <Button href={`mailto:${contact.email}`}>
             <FiMail />
-            Email Me
           </Button>
 
           <Button href={linkedin?.url ?? "#"} variant="secondary">
             <FiLinkedin />
-            LinkedIn
           </Button>
         </div>
 

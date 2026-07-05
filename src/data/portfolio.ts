@@ -7,7 +7,7 @@ export const portfolio: PortfolioData = {
       "Software Engineer specializing in Java, Spring Boot, React, Flutter, Kafka, Azure, AWS and Cloud Native Applications.",
   },
   hero: {
-    badge: "Available for freelance opportunities",
+    badge: "Available for freelance opportunities & open-source contributions",
     title: "Building dependable software for modern products.",
     description:
       "Software engineer focused on backend systems, cloud-native applications, and polished user experiences. I enjoy turning complex requirements into reliable, maintainable software.",
@@ -32,7 +32,7 @@ export const portfolio: PortfolioData = {
       "SQL",
       "NoSQL",
       "TypeScript",
-      "Firebase"
+      "Firebase",
     ],
   },
   technologies: [
@@ -48,6 +48,7 @@ export const portfolio: PortfolioData = {
     "Kubernetes",
     "Oracle",
     "MySQL",
+    "PostgreSQL",
   ],
   about: {
     title: "About",
@@ -56,7 +57,7 @@ export const portfolio: PortfolioData = {
       "I’m a software engineer with experience designing scalable backend systems, modern web applications, and cross-platform products. I care deeply about reliability, maintainability, and thoughtful user experience.",
     cards: [
       {
-        title: "3.5+ Years",
+        title: "4+ Years",
         subtitle: "Professional Experience",
       },
       {
@@ -69,7 +70,7 @@ export const portfolio: PortfolioData = {
       },
       {
         title: "Cloud",
-        subtitle: "Azure • Docker • Kubernetes",
+        subtitle: "Azure • AWS • Docker • Kubernetes",
       },
     ],
   },
@@ -119,9 +120,9 @@ export const portfolio: PortfolioData = {
   ],
   projects: [
     {
-      title: "Personal Portfolio",
-      description: "A polished portfolio showcasing my experience, engineering approach, and recent work using React, TypeScript, and SCSS.",
-      technologies: ["React", "TypeScript", "SCSS", "Framer Motion", "Vite"],
+      title: "Enterprise Doc Management",
+      description: "A full-stack document management system for enterprise clients, enabling secure storage, retrieval, and collaboration on documents.",
+      technologies: ["React", "TypeScript", "SCSS", "Java", "Spring Boot", "PostgreSQL"],
       github: "",
       live: "",
       featured: true,
@@ -129,15 +130,7 @@ export const portfolio: PortfolioData = {
     {
       title: "LifeOS",
       description: "An offline-first personal productivity platform for finance, health, habits, and goals built with Flutter.",
-      technologies: ["Flutter", "Isar", "Provider", "MVVM"],
-      github: "",
-      live: "",
-      featured: true,
-    },
-    {
-      title: "New York Tolling Modernization",
-      description: "Enterprise backend services for a large-scale tolling modernization platform built with cloud-native architecture.",
-      technologies: ["Java", "Spring Boot", "Kafka", "Azure", "Oracle"],
+      technologies: ["Flutter", "Provider", "MVVM"],
       github: "",
       live: "",
       featured: true,
@@ -167,6 +160,14 @@ export const portfolio: PortfolioData = {
       featured: false,
     },
     {
+      title: "Interview Management System",
+      description: "Tool to streamline interview scheduling, candidate tracking, and feedback collection for recruitment teams.",
+      technologies: ["React", "Node.js", "SQL", "TailwindCSS"],
+      github: "https://github.com/VaishnavDatir/Interview-Management-System",
+      live: "",
+      featured: false,
+    },
+    {
       title: "Brand Management System",
       description: "A comprehensive system for managing brand assets, marketing campaigns, and client interactions with an analytics dashboard. This was a private project developed for an organization.",
       technologies: ["React", "TypeScript", "Node.js", "Chart.js"],
@@ -179,14 +180,6 @@ export const portfolio: PortfolioData = {
       description: "An app designed to help community admins manage member registrations, announcements, event scheduling, and feedback. This was a private project developed for an organization.",
       technologies: ["Flutter", "Firebase", "Cloud Functions"],
       github: "",
-      live: "",
-      featured: false,
-    },
-    {
-      title: "Interview Management System",
-      description: "Tool to streamline interview scheduling, candidate tracking, and feedback collection for recruitment teams.",
-      technologies: ["React", "Node.js", "SQL", "TailwindCSS"],
-      github: "https://github.com/VaishnavDatir/Interview-Management-System",
       live: "",
       featured: false,
     },

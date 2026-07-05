@@ -2,7 +2,7 @@ import Button from "@/components/common/Button";
 import { portfolio } from "@/data";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { useMemo } from "react";
-import { FiArrowDown, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
 import styles from "./Hero.module.scss";
 
@@ -157,15 +157,6 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      <motion.div
-        className={styles.scroll}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.4 }}
-      >
-        <FiArrowDown />
-        <span>Scroll</span>
-      </motion.div>
     </section>
   );
 };
