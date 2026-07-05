@@ -248,4 +248,16 @@ export const portfolio: PortfolioData = {
     location: "Mumbai, India",
     availability: "Open to opportunities",
   },
+
+  footer: {
+    tagline:
+      "Building reliable software with clean architecture, thoughtful design, and modern technologies.",
+    builtWith: [
+      "React",
+      "TypeScript",
+      "SCSS",
+      "Vite",
+      "Framer Motion",
+    ],
+  },
 };

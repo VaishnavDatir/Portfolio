@@ -18,18 +18,13 @@ export interface Social {
 }
 
 export interface Contact {
-
     title: string;
-
     description: string;
-
     email: string;
-
     location: string;
-
     availability: string;
-
 }
+
 export interface AboutCard {
     title: string;
     subtitle: string;
@@ -61,11 +56,13 @@ export interface Project {
 }
 
 export interface Achievement {
-
     value: string;
-
     label: string;
+}
 
+export interface Footer {
+    tagline: string,
+    builtWith: string[]
 }
 
 export interface PortfolioData {
@@ -89,4 +86,6 @@ export interface PortfolioData {
     socials: Social[];
 
     contact: Contact;
+
+    footer: Footer;
 }

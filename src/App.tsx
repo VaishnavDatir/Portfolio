@@ -6,6 +6,7 @@ import Experience from "@/components/sections/Experience";
 import Hero from "@/components/sections/Hero";
 import Projects from "@/components/sections/Projects";
 import TechMarquee from "@/components/sections/TechMarquee";
+import Footer from "./components/sections/Footer";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Projects />
       <Achievements />
       <Contact />
+      <Footer />
     </>
   );
 };

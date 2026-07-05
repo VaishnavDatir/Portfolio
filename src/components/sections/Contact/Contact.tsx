@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiArrowRight, FiGithub, FiLinkedin, FiMail, FiMapPin } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiMapPin } from "react-icons/fi";
 
 import Button from "@/components/common/Button";
 import { portfolio } from "@/data";
@@ -57,10 +57,7 @@ const Contact = () => {
           </a>
         </div>
 
-        <a href="#hero" className={styles.back} aria-label="Back to top of page">
-          Back to Top
-          <FiArrowRight />
-        </a>
+
       </motion.div>
     </section>
   );
